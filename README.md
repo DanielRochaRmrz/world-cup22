@@ -5,7 +5,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 node 18.12.1
 
-# En dado caso de en las colleciones de firebase
+# En dado caso de un error en las colleciones de firebase
 
 Archivo `@angular/fire/compat/firestore/interfaces.d.ts`
 
