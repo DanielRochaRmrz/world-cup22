@@ -1,0 +1,14 @@
+.container {
+  padding: 100px 20px 20px 20px;
+  display: grid;
+  gap: 1rem;
+  grid-auto-rows: 20rem;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+}
+
+.container-item {
+  display: grid;
+  gap: 2rem;
+  grid-auto-rows: 3rem;
+  grid-template-columns: repeat(auto-fill, minmax(4rem, 1fr));
+}

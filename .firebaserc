@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "world-cup-23": {
+      "hosting": {
+        "world-cup22": [
+          "world-cup-23"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "world-cup-23"
+  }
+}

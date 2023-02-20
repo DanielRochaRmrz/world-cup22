@@ -1,0 +1,46 @@
+table {
+  width: 100%;
+}
+
+.mat-mdc-form-field {
+  font-size: 14px;
+  width: 50%;
+}
+
+td, th {
+  width: 25%;
+}
+
+.form-team {
+  padding: 100px 40px 40px;
+}
+
+.row .mat-mdc-button-base {
+  margin: 8px 8px 8px 0;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  width: auto;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.div-spinner {
+  display: grid;
+  place-items: center;
+  padding: 50px;
+}
+
+.text-center {
+  justify-content: center;
+}

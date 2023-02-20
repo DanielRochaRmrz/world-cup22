@@ -1,6 +1,17 @@
 # WorldCup22
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.5.
+# Node version
+
+node 18.12.1
+
+# En dado caso de en las colleciones de firebase
+
+Archivo `@angular/fire/compat/firestore/interfaces.d.ts`
+
+Esto se soluciona momentáneamente cambiando el archivo anterior, reemplazando los números de línea 15 y 24 a:
+
+`data(options?: SnapshotOptions): any;`
 
 ## Development server
 

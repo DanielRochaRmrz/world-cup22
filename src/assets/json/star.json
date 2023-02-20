@@ -1,0 +1,22 @@
+[
+  {
+    "star": "Una ★",
+    "num": "1"
+  },
+  {
+    "star": "Dos ★ ★",
+    "num": "2"
+  },
+  {
+    "star": "Tres ★ ★ ★",
+    "num": "3"
+  },
+  {
+    "star": "Cuatro ★ ★ ★ ★",
+    "num": "4"
+  },
+  {
+    "star": "Cinco ★ ★ ★ ★ ★",
+    "num": "5"
+  }
+]

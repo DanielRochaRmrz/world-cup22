@@ -1,0 +1,33 @@
+<div class="container">
+  <mat-card *ngFor="let g of grups">
+    <mat-card-header>
+      <mat-card-title>Grupo {{ g.grupo }}</mat-card-title>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+    <mat-card-content>
+      <mat-list *ngFor="let t of teams">
+        <div *ngIf="g.grupo === t.grupo; then printTeam"></div>
+        <ng-template #printTeam>
+          <div class="container-item">
+            <div>
+              <mat-icon matListItemIcon>flag</mat-icon>
+            </div>
+            <div>
+              {{ t.equipo }}
+            </div>
+            <div>
+              <button
+                mat-mini-fab
+                color="primary"
+                (click)="showPlayerTeam(t.uid)"
+              >
+                <mat-icon>groups</mat-icon>
+              </button>
+            </div>
+          </div>
+          <mat-divider></mat-divider>
+        </ng-template>
+      </mat-list>
+    </mat-card-content>
+  </mat-card>
+</div>

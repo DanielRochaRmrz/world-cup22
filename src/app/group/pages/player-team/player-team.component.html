@@ -1,0 +1,49 @@
+<div mat-dialog-title>
+  <h1>
+    {{ data.team.equipo }}
+  </h1>
+  <h6>
+    <div matListItemLine>
+      <star-rating
+        [starType]="'svg'"
+        [rating]="$any(data.team.rendimiento)"
+        [readOnly]="true"
+      ></star-rating>
+    </div>
+  </h6>
+</div>
+
+<div mat-dialog-content>
+  <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <div style="overflow-x: auto">
+      <!-- Nombre Column -->
+      <ng-container matColumnDef="nombre">
+        <mat-header-cell *matHeaderCellDef> Nombre </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{ element.nombre }} </mat-cell>
+      </ng-container>
+
+      <!-- Edad Column -->
+      <ng-container matColumnDef="edad">
+        <mat-header-cell *matHeaderCellDef> Edad </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{ element.edad }} </mat-cell>
+      </ng-container>
+
+      <!-- Camiseta Column -->
+      <ng-container matColumnDef="camiseta">
+        <mat-header-cell *matHeaderCellDef> Camiseta </mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          {{ element.numero }}
+        </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+    </div>
+  </mat-table>
+</div>
+
+<div mat-dialog-actions align="end">
+  <button mat-raised-button color="primary" (click)="closeDialog()">
+    Cerrar
+  </button>
+</div>

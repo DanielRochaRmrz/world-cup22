@@ -1,0 +1,21 @@
+.spacer {
+  flex: 1 1 auto;
+}
+
+.logo {
+  height: 3rem;
+}
+
+.mat-toolbar-bar {
+  z-index: 99;
+  position: fixed;
+  box-shadow: 0 2px 5px #0000004d;
+}
+
+.mat-toolbar-nav {
+  box-shadow: 0 2px 5px #0000004d;
+}
+
+mat-sidenav {
+  width: 250px;
+}

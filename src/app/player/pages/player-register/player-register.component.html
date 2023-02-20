@@ -1,0 +1,39 @@
+<h1 mat-dialog-title>Registro de jugador</h1>
+
+<div mat-dialog-content>
+  <div class="cointainer">
+    <form autocomplete="off" [formGroup]="registerForm" (ngSubmit)="registerPlayer()">
+      <mat-form-field appearance="outline">
+        <mat-label>Nombre</mat-label>
+        <input type="text" formControlName="nombre" matInput />
+        <mat-error *ngIf="invalidField('nombre')"> El campo nombre es obligatorio </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Edad</mat-label>
+        <input type="number" formControlName="edad" matInput />
+        <mat-error *ngIf="invalidField('edad')"> {{ ageErrorMsg }} </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Numero de camiseta</mat-label>
+        <input type="number" formControlName="numero" matInput />
+        <mat-error *ngIf="invalidField('numero')"> {{ numberErrorMsg }} </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Equipo</mat-label>
+        <mat-select formControlName="equipo">
+          <mat-option *ngFor="let t of teams" [value]="t.uid">{{ t.equipo }}</mat-option>
+        </mat-select>
+        <mat-error *ngIf="invalidField('equipo')"> El campo equipo es obligatorio </mat-error>
+      </mat-form-field>
+    </form>
+  </div>
+</div>
+
+<div mat-dialog-actions align="end">
+  <button mat-raised-button color="basic" (click)="closeDialog()">
+    Cerrar
+  </button>
+  <button mat-raised-button color="primary" (click)="registerPlayer()">
+    Registrar
+  </button>
+</div>

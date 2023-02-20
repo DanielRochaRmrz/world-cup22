@@ -1,0 +1,37 @@
+<h1 mat-dialog-title>Editar equipo</h1>
+
+<div mat-dialog-content>
+  <div class="cointainer">
+    <form autocomplete="off" [formGroup]="registerForm" (ngSubmit)="updateTeam()">
+      <mat-form-field appearance="outline">
+        <mat-label>Equipo</mat-label>
+        <input type="text" formControlName="equipo"matInput />
+        <mat-error> El campo equipo es obligatorio </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Rendimiento</mat-label>
+        <mat-select formControlName="rendimiento">
+          <mat-option  *ngFor="let s of stars" [value]="s.num">{{ s.star }}</mat-option>
+        </mat-select>
+        <mat-hint>Una ★ malo, 5 ★ ★ ★ ★ ★ excelente</mat-hint>
+        <mat-error *ngIf="invalidField('rendimiento')"> El campo rendimiento es obligatorio </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Grupo</mat-label>
+        <mat-select formControlName="grupo">
+          <mat-option *ngFor="let g of grups" [value]="g.grupo">{{ g.grupo }}</mat-option>
+        </mat-select>
+        <mat-error *ngIf="invalidField('grupo')"> El campo grupo es obligatorio </mat-error>
+      </mat-form-field>
+    </form>
+  </div>
+</div>
+
+<div mat-dialog-actions align="end">
+  <button mat-raised-button color="basic" (click)="closeDialog()">
+    Cerrar
+  </button>
+  <button mat-raised-button color="primary" (click)="updateTeam()">
+    Actulizar
+  </button>
+</div>
